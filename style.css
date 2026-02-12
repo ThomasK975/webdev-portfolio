@@ -5,3 +5,13 @@
 .hovercolourchange:hover {
     color:#00FFFB !important;
 }
+
+.language {
+  border-radius: 1rem;
+  width: clamp(160px, 18vw, 200px); 
+  text-align: center;
+}
+
+.language:hover{
+    border-bottom: 5px solid red;
+}
