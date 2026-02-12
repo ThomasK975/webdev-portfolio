@@ -13,5 +13,6 @@
 }
 
 .language:hover{
-    border-bottom: 5px solid red;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
 }
