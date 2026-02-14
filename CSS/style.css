@@ -6,11 +6,11 @@
     color:#00FFFB !important;
 }
 
-.language {
-  border-radius: 1rem;
+.language{
   width: clamp(160px, 18vw, 200px); 
-  text-align: center;
 }
+
+
 
 .language:hover{
     transform: translateY(-5px);
