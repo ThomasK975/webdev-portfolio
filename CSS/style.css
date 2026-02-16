@@ -10,7 +10,12 @@
   width: clamp(160px, 18vw, 200px); 
 }
 
-
+.overlap-line{
+    position:absolute;
+    width: 65%;
+    border-top: 6px solid #00FFFB;
+    border-radius: 2px;
+}
 
 .language:hover{
     transform: translateY(-5px);
