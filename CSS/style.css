@@ -43,3 +43,23 @@ html, body {
     transform: translateY(-5px);
     box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
 }
+
+#homepagecontainer {
+    padding-top: 340px
+}
+
+#nameFontSize {
+    font-size: 100px;
+}
+
+#aboutFontSize {
+    font-size: 120px;
+}
+
+#loremTextSize {
+    font-size: 50px;
+}
+
+.aquaText{
+    color:#00FFFB;
+}
