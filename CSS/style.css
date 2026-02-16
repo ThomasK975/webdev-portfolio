@@ -59,6 +59,14 @@ html, body {
     color:#00FFFB;
 }
 
+.redText{
+    color: #E94560;
+}
+
+.greyBackground {
+    background: #16213E;
+}
+
 /* Put this on your nav links */
 .nav-link {
   position: relative;
