@@ -4,6 +4,7 @@
 
 .hovercolourchange:hover {
     color:#00FFFB !important;
+    text-decoration: underline;
 }
 
 .language{
@@ -17,13 +18,28 @@
     border-radius: 2px;
 }
 
-.language:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
+.home-style {
+    background: linear-gradient(135deg,#0B0616 0%,#1A0B2E 45%,#3A0CA3 100%); 
+    font-family: JetBrains Mono, monospace;
 }
 
 html, body {
     margin: 0px;
     padding: 0px;
     gap: 0px;
+}
+
+
+.github-button:hover {
+    color: #00FFFB!important;
+    background-color: transparent;
+}
+
+.homebutton-fade:hover {
+  animation: fadeIn 4s;                 /* animate.css keyframes name */
+}
+
+.language:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
 }

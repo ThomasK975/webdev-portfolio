@@ -5,6 +5,8 @@
 <head>
     <title>Thomas Kilian - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link href="CSS/style.css" rel="stylesheet">
     <link href="Images/favicon.png" rel="icon" type="image/png">
     <meta charset="utf-8">
@@ -16,7 +18,7 @@
 </head>
 
 <body class="h-100" style="overflow: hidden;">
-    <div class="container-fluid h-100" style=" background: linear-gradient(135deg,#0B0616 0%,#1A0B2E 45%,#3A0CA3 100%); font-family: JetBrains Mono, monospace;">
+    <div class="container-fluid h-100 home-style">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
@@ -30,7 +32,8 @@
                             <div class="navbar-nav w-100">
                                 <div class="row w-100">
                                     <div class="col-6 d-flex">
-                                        <a class="nav-link active fs-5 hovercolourchange" aria-current="page" href="home.html">Home</a>
+                                        <a class="nav-link active fs-5 hovercolourchange" aria-current="page"
+                                            href="home.html">Home</a>
                                         <a class="nav-link fs-5 hovercolourchange" href="about.html">About</a>
                                         <a class="nav-link fs-5 hovercolourchange" href="portfolio.html">Portfolio</a>
                                     </div>
@@ -43,37 +46,44 @@
             </div>
         </div>
 
-         <div class="container-fluid h-100" style="padding-top: 240px;">
+        <div class="container-fluid h-100" style="padding-top: 240px;">
             <div class="row">
                 <div class="col align-items-center flex-column d-flex">
-                     <p style="color:#00FFFB">Hello, my name is</p>
+                    <p style="color:#00FFFB">Hello, my name is</p>
                     <h1 class="text-white" style="font-size: 100px;">Thomas Kilian</h1>
-                    <p class="text-white">I am currently a first year computer science student studying at Dundee University.</p>
-                    <p class="text-white">I have made this website to showcase some of my skills I have learned so far.</p>
+                    <p class="text-white">I am currently a first year computer science student studying at Dundee
+                        University.</p>
+                    <p class="text-white">I have made this website to showcase some of my skills I have learned so far.
+                    </p>
                     <div class="row">
                         <div class="col">
-                            <a class="btn btn-info btn-lg" href="https://github.com/ThomasK975">
+                            <a class="btn btn-info btn-lg github-button homebutton-fade" href="https://github.com/ThomasK975">
                                 <div class="d-flex gap-2">
-                                    <h2 class="mt-1 h5">View GitHub</h2>
+                                    <h2 class="mt-1 h5 text-white">View GitHub</h2>
                                     <img src="Images/github-icon.png" width="32" alt="github logo">
                                 </div>
                             </a>
-                            <a class="btn btn-outline-info btn-lg" href="tel:+4733378901">
+
+                            <a class="btn btn-outline-info btn-lg homebutton-fade" href="tel:+4733378901">
                                 <h2 class="mt-1 h5">Contact📞</h2>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-           
 
-         </div>
+
+        </div>
     </div>
 
-    
-           
+
+
 </body>
 
 
 
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
