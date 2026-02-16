@@ -22,6 +22,8 @@ html, body {
     margin: 0px;
     padding: 0px;
     gap: 0px;
+    overflow-y: auto;
+    height: auto;
 }
 
 
@@ -39,9 +41,7 @@ html, body {
     box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
 }
 
-#homeContainer {
-    padding-top: 10%;
-}
+
 
 #nameFontSize {
     font-size: 100px;
