@@ -1,10 +1,5 @@
-.hovercolourchange {
-
-}
-
 .hovercolourchange:hover {
     color:#00FFFB !important;
-    text-decoration: underline;
 }
 
 .language{
@@ -36,7 +31,7 @@ html, body {
 }
 
 .homebutton-fade:hover {
-  animation: fadeIn 4s;                 /* animate.css keyframes name */
+  animation: fadeIn 4s;               
 }
 
 .language:hover{
@@ -44,8 +39,8 @@ html, body {
     box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
 }
 
-#homepagecontainer {
-    padding-top: 340px
+#homeContainer {
+    top: -5%;
 }
 
 #nameFontSize {
@@ -62,4 +57,37 @@ html, body {
 
 .aquaText{
     color:#00FFFB;
+}
+
+/* Put this on your nav links */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;   /* remove default underline */
+  padding-bottom: 6px;     /* space for the animated underline */
+}
+
+/* The animated underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;              /* sits on the bottom of the link */
+  width: 100%;
+  height: 2px;
+  background: currentColor;   /* matches text color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+/* Hover: grow underline left -> right */
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Optional: keep underline shown for the current page */
+.nav-link.active::after {
+  transform: scaleX(1);
 }
