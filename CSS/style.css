@@ -102,3 +102,10 @@ html, body {
 .nav-link.active::after {
   transform: scaleX(1);
 }
+
+/* Disable the underline animation in the collapsed (hamburger) menu */
+@media (max-width: 991.98px) {  
+  .nav-link::after {
+    content: none !important;
+  }
+}
