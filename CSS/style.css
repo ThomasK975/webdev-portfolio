@@ -2,9 +2,7 @@
     color:#00FFFB !important;
 }
 
-.language{
-  width: clamp(16vw, 18vw, 20vw); 
-}
+
 
 .overlap-line{
     position:absolute;
@@ -51,12 +49,23 @@ html, body {
 }
 
 #aboutFontSize {
-    font-size: 120px;
+    font-size: clamp(2.5rem, 8vw, 5.5rem); 
+    line-height: .95;
 }
 
-#loremTextSize {
-    font-size: 50px;
+.loremTextSize{
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
+  line-height: 1.25;
+  max-width: 42ch; /* stops it getting too wide on desktop */
 }
+
+/* Paragraph body text */
+.aboutBody{
+  font-size: clamp(0.98rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  max-width: 70ch; /* readable line length */
+}
+
 
 .aquaText{
     color:#00FFFB;
