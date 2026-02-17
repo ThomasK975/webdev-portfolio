@@ -20,57 +20,65 @@
 
 <body>
     <div class="container-fluid home-style min-vh-100">
-        <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-bs-theme="dark">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
 
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <!-- Proper Bootstrap structure: navbar-nav + column layout -->
-                            <div class="navbar-nav flex-column flex-lg-row w-100">
-                                <a class="nav-link active fs-5 hovercolourchange" aria-current="page" href="index.html">Home</a>
-                                <a class="nav-link fs-5 hovercolourchange" href="about.html">About</a>
-                                <a class="nav-link fs-5 hovercolourchange" href="portfolio.html">Portfolio</a>
+        <header>
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-bs-theme="dark">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <!-- Proper Bootstrap structure: navbar-nav + column layout -->
+                                <div class="navbar-nav flex-column flex-lg-row w-100">
+                                    <a class="nav-link active fs-5 hovercolourchange" aria-current="page"
+                                        href="index.html">Home</a>
+                                    <a class="nav-link fs-5 hovercolourchange" href="about.html">About</a>
+                                    <a class="nav-link fs-5 hovercolourchange" href="portfolio.html">Portfolio</a>
+                                </div>
                             </div>
+
                         </div>
-
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </div>
-        </div>
+        </header>
 
 
-        <div class="row">
-            <div class="col align-items-center flex-column d-flex" id="homeContainer">
-                <p class="aquaText">Hello, my name is</p>
-                <h1 class="text-white" id="nameFontSize">Thomas Kilian</h1>
-                <p class="text-white">I am a first year computer science student studying at Dundee
-                    University.</p>
-                <p class="text-white">I have made this website to showcase some of my skills I have learned so far.
-                </p>
-                <div class="row">
-                    <div class="col">
-                        <a class="btn btn-info btn-lg github-button homebutton-fade"
-                            href="https://github.com/ThomasK975">
-                            <div class="d-flex gap-2">
-                                <h2 class="mt-1 h5 text-white">View GitHub</h2>
-                                <img src="Images/github-icon.png" width="32" alt="github logo">
-                            </div>
-                        </a>
+        <main>
+            <div class="row">
+                <div class="col align-items-center flex-column d-flex" id="homeContainer">
+                    <p class="aquaText">Hello, my name is</p>
+                    <h1 class="text-white" id="nameFontSize">Thomas Kilian</h1>
+                    <p class="text-white">I am a first year computer science student studying at Dundee
+                        University.</p>
+                    <p class="text-white">I have made this website to showcase some of my skills I have learned so far.
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn btn-info btn-lg github-button homebutton-fade"
+                                href="https://github.com/ThomasK975">
+                                <div class="d-flex gap-2">
+                                    <span class="mt-1 h5 text-white">View GitHub</span>
+                                    <img src="Images/github-icon.png" width="32" alt="github logo">
+                                </div>
+                            </a>
 
-                        <a class="btn btn-outline-info btn-lg homebutton-fade" href="tel:+4733378901">
-                            <h2 class="mt-1 h5">Contact📞</h2>
-                        </a>
+                            <a class="btn btn-outline-info btn-lg homebutton-fade" href="tel:+4733378901">
+                                <span class="mt-1 h5">Contact📞</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
+
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
