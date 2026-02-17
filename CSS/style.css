@@ -56,14 +56,14 @@ html, body {
 .loremTextSize{
   font-size: clamp(1.1rem, 2.6vw, 2rem);
   line-height: 1.25;
-  max-width: 42ch; /* stops it getting too wide on desktop */
+  max-width: 42ch; 
 }
 
-/* Paragraph body text */
+
 .aboutBody{
   font-size: clamp(0.98rem, 1.35vw, 1.125rem);
   line-height: 1.65;
-  max-width: 70ch; /* readable line length */
+  max-width: 70ch; 
 }
 
 
@@ -79,42 +79,67 @@ html, body {
     background: #16213E;
 }
 
-/* Put this on your nav links */
+
 .nav-link {
   position: relative;
   display: inline-block;
-  text-decoration: none;   /* remove default underline */
-  padding-bottom: 6px;     /* space for the animated underline */
+  text-decoration: none;   
+  padding-bottom: 6px;     
 }
 
-/* The animated underline */
+
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;              /* sits on the bottom of the link */
+  bottom: 0;              
   width: 100%;
   height: 2px;
-  background: currentColor;   /* matches text color */
+  background: currentColor;  
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 220ms ease;
 }
 
-/* Hover: grow underline left -> right */
+
 .nav-link:hover::after,
 .nav-link:focus-visible::after {
   transform: scaleX(1);
 }
 
-/* Optional: keep underline shown for the current page */
+
 .nav-link.active::after {
   transform: scaleX(1);
 }
 
-/* Disable the underline animation in the collapsed (hamburger) menu */
 @media (max-width: 991.98px) {  
   .nav-link::after {
     content: none !important;
   }
 }
+
+/* HOME hero text sizing */
+#homeContainer .aquaText{
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  line-height: 1.3;
+}
+
+#nameFontSize{
+  font-size: clamp(2.2rem, 8.5vw, 5.25rem);
+  line-height: 0.95;
+}
+
+#homeContainer > p.text-white{
+  font-size: clamp(0.98rem, 1.6vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 65ch;         
+  text-align: center;     
+}
+
+/* Button text */
+#homeContainer .btn h2{
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.2;
+  margin: 0;              
+}
+
