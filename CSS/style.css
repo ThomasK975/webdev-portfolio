@@ -1,20 +1,4 @@
-.hovercolourchange:hover {
-    color:#00FFFB !important;
-}
-
-
-
-.overlap-line{
-    position:absolute;
-    width: 65%;
-    border-top: 6px solid #00FFFB;
-    border-radius: 2px;
-}
-
-.home-style {
-    background: linear-gradient(135deg,#0B0616 0%,#1A0B2E 45%,#3A0CA3 100%); 
-    font-family: JetBrains Mono, monospace;
-}
+/*General CSS*/
 
 html, body {
     margin: 0px;
@@ -25,55 +9,10 @@ html, body {
 }
 
 
-.github-button:hover {
-    color: #00FFFB!important;
-    background-color: transparent;
+.home-style {
+    background: linear-gradient(135deg,#0B0616 0%,#1A0B2E 45%,#3A0CA3 100%); 
+    font-family: JetBrains Mono, monospace;
 }
-
-.homebutton-fade:hover {
-  animation: fadeIn 4s;               
-}
-
-.language:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
-}
-
-#homeContainer {
-    padding-top: 20vh;
-}
-
-
-#nameFontSize {
-    font-size: 100px;
-}
-
-#aboutFontSize {
-    font-size: clamp(2.5rem, 8vw, 5.5rem); 
-    line-height: .95;
-}
-
-#github-Button {
-  
-}
-
-#contact-button {
-
-}
-
-.loremTextSize{
-  font-size: clamp(1.1rem, 2.6vw, 2rem);
-  line-height: 1.25;
-  max-width: 42ch; 
-}
-
-
-.aboutBody{
-  font-size: clamp(0.98rem, 1.35vw, 1.125rem);
-  line-height: 1.65;
-  max-width: 70ch; 
-}
-
 
 .aquaText{
     color:#00FFFB;
@@ -87,7 +26,62 @@ html, body {
     background: #16213E;
 }
 
+/*Font size all footers use*/
+footer p{
+  font-size: clamp(0.75rem, 2.2vw, 1rem);
+  white-space: nowrap;
+}
 
+
+/*End of general CSS*/
+
+
+
+/*Index page specific CSS*/
+.menuhovercolourchange:hover {
+    color:#00FFFB !important;
+}
+
+
+.github-button:hover {
+    color: #00FFFB!important;
+    background-color: transparent;
+}
+
+#homeContainer {
+    padding-top: 20vh;
+}
+
+#homeContainer .aquaText{
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  line-height: 1.3;
+}
+
+#nameFontSize{
+  font-size: clamp(2.2rem, 8.5vw, 5.25rem);
+  line-height: 0.95;
+}
+
+#homeContainer > p.text-white{
+  font-size: clamp(0.98rem, 1.6vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 65ch;         
+  text-align: center;     
+}
+
+.button-text {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+  line-height: 1.2;
+  margin: 0;              
+}
+
+/*The hover animation on the buttons*/
+.homebutton-fade:hover {
+  animation: fadeIn 4s;               
+}
+
+
+/*Navbar hover animation*/
 .nav-link {
   position: relative;
   display: inline-block;
@@ -126,38 +120,14 @@ html, body {
   }
 }
 
-/* HOME hero text sizing */
-#homeContainer .aquaText{
-  font-size: clamp(1rem, 2.2vw, 1.35rem);
-  line-height: 1.3;
-}
+/*End of navbar hover animation*/
 
-#nameFontSize{
-  font-size: clamp(2.2rem, 8.5vw, 5.25rem);
-  line-height: 0.95;
-}
-
-#homeContainer > p.text-white{
-  font-size: clamp(0.98rem, 1.6vw, 1.2rem);
-  line-height: 1.65;
-  max-width: 65ch;         
-  text-align: center;     
-}
-
-/* Button text */
-.button-text {
-  font-size: clamp(1rem, 1.8vw, 2rem);
-  line-height: 1.2;
-  margin: 0;              
-}
-
-
-
+/*The type writer animation*/
 .typewriter{
   display: inline-block;
 }
 
-/* total cycle = TYPE_TIME + PAUSE_TIME */
+
 #nameFontSize{
   display: inline-block;
   overflow: hidden;
@@ -166,21 +136,90 @@ html, body {
   border-right: .15em solid rgb(0,195,255);
   letter-spacing: .15em;
 
-  /* 4s typing + 2s pause = 6s total cycle */
+ 
   animation:
     revealLoop 6s steps(30, end) infinite,
     blink-caret 1s step-end infinite;
 }
 
-/* Reveal then hold (pause) then reset */
+
 @keyframes revealLoop{
   0%   { width: 0; }
-  66.666% { width: 100%; }  /* end of typing (4s of 6s) */
-  90%  { width: 100%; }     /* hold during pause */
-  100% { width: 0; }        /* instant reset at loop boundary */
+  66.666% { width: 100%; }  
+  90%  { width: 100%; }     
+  100% { width: 0; }        
 }
 
 @keyframes blink-caret{
   from, to { border-color: transparent; }
   50%      { border-color: #00FFFB; }
 }
+
+/*End of the type writer animation*/
+/*End of index page specific CSS*/
+
+
+
+/*About page specific CSS*/
+
+.overlap-line{
+    position:absolute;
+    width: 65%;
+    border-top: 6px solid #00FFFB;
+    border-radius: 2px;
+}
+
+#aboutHeaderFontSize {
+    font-size: clamp(2.5rem, 8vw, 5.5rem); 
+    line-height: .95;
+}
+
+.subHeadingTextSize{
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
+  line-height: 1.25;
+  max-width: 42ch; 
+}
+
+
+.aboutParagraphs{
+  font-size: clamp(0.98rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  max-width: 70ch; 
+}
+
+
+/*End of about page specific CSS*/
+
+
+
+/*Portfolio page specific CSS*/
+
+.language:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0px rgba(4, 247, 255, 1) !important;
+}
+
+/*End of portfolio page specific CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
