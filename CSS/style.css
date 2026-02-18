@@ -53,6 +53,14 @@ html, body {
     line-height: .95;
 }
 
+#github-Button {
+  
+}
+
+#contact-button {
+
+}
+
 .loremTextSize{
   font-size: clamp(1.1rem, 2.6vw, 2rem);
   line-height: 1.25;
@@ -137,11 +145,13 @@ html, body {
 }
 
 /* Button text */
-#homeContainer .btn h2{
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+.button-text {
+  font-size: clamp(0.75rem, 1.8vw, 1.25rem);
   line-height: 1.2;
   margin: 0;              
 }
+
+
 
 .typewriter{
   display: inline-block;
