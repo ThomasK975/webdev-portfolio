@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container-fluid home-style min-vh-100">
+    <div class="container-fluid home-style min-vh-100 d-flex flex-column">
 
         <header>
             <div class="row">
@@ -27,13 +27,12 @@
                     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-bs-theme="dark">
                         <div class="container-fluid">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <!-- Proper Bootstrap structure: navbar-nav + column layout -->
                                 <div class="navbar-nav flex-column flex-lg-row w-100">
                                     <a class="nav-link active fs-5 hovercolourchange" aria-current="page"
                                         href="index.html">Home</a>
@@ -49,44 +48,44 @@
         </header>
 
 
-        <main>
-            <div class="row">
-                <div class="col align-items-center flex-column d-flex" id="homeContainer">
-                    <p class="aquaText">Hello, my name is</p>
-                    <div class="typewriter">
-                        <h1 class="text-white" id="nameFontSize">Thomas Kilian</h1>
-                    </div>
-                    <p class="text-white">I am a first year computer science student studying at Dundee
-                        University.</p>
-                    <p class="text-white">I have made this website to showcase some of my skills I have learned so far.
-                    </p>
-                    <div class="row">
-                        <div class="col">
-                            <a class="btn btn-info github-button homebutton-fade"
-                                href="https://github.com/ThomasK975">
-                                <div class="d-flex gap-2">
-                                    <span class="mt-1 text-white button-text">View GitHub</span>
-                                    <img src="Images/github-icon.png" width="32" alt="github logo">
-                                </div>
-                            </a>
+        <main class="flex-grow-1">
+            <section>
+                <div class="row">
+                    <div class="col align-items-center flex-column d-flex" id="homeContainer">
+                        <p class="aquaText">Hello, my name is</p>
+                        <div class="typewriter">
+                            <h1 class="text-white" id="nameFontSize">Thomas Kilian</h1>
+                        </div>
+                        <p class="text-white">I am a first year computer science student studying at Dundee
+                            University.</p>
+                        <p class="text-white">I have made this website to showcase some of my skills I have learned so
+                            far.
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-info github-button homebutton-fade" href="https://github.com/ThomasK975">
+                                    <div class="d-flex gap-2">
+                                        <span class="mt-1 text-white button-text">View GitHub</span>
+                                        <img src="Images/github-icon.png" width="32" alt="github logo">
+                                    </div>
+                                </a>
 
-                            <a class="btn btn-outline-info homebutton-fade contact-button" href="tel:+4733378901">
-                                <span class="mt-1 button-text">Contact📞</span>
-                            </a>
+                                <a class="btn btn-outline-info homebutton-fade contact-button" href="tel:+4733378901">
+                                    <span class="mt-1 button-text">Contact📞</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
+
+        <footer class="mt-auto py-3 d-flex align-items-center justify-content-center">
+            <p class="text-white m-0 p-2">© 2026 Thomas Kilian. All rights reserved.</p>
+        </footer>
     </div>
-
-    
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 </body>
+
 
 
 
