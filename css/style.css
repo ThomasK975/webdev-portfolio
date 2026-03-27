@@ -12,6 +12,36 @@ html, body {
 .home-style {
     background: linear-gradient(135deg,#0B0616 0%,#1A0B2E 45%,#3A0CA3 100%); 
     font-family: JetBrains Mono, monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#particles-js canvas {
+  pointer-events: none !important;
+}
+
+.home-style > header {
+  position: relative;
+  z-index: 3;
+}
+
+.home-style > main,
+.home-style > footer {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  z-index: 1055;
 }
 
 .aquaText{
