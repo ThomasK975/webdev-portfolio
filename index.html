@@ -66,7 +66,7 @@
                     <div class="col align-items-center flex-column d-flex" id="homeContainer">
                         <p class="aquaText">Hello, my name is</p>
                         <div class="typewriter">
-                            <h1 class="text-white" id="nameFontSize">Thomas Kilian</h1>
+                            <h1 class="text-white" id="nameFontSize" data-typewriter-text="Thomas Kilian"></h1>
                         </div>
                         <p class="text-white">I am a first year computer science student studying at Dundee
                             University.</p>
@@ -165,6 +165,42 @@
             },
             retina_detect: true
         });
+
+        (function runTypewriterOnce() {
+            const nameHeading = document.getElementById('nameFontSize');
+
+            if (!nameHeading) {
+                return;
+            }
+
+            const fullText = nameHeading.getAttribute('data-typewriter-text') || '';
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                nameHeading.textContent = fullText;
+                nameHeading.classList.add('typing-complete');
+                return;
+            }
+
+            let index = 0;
+            const typingSpeedMs = 240;
+
+            nameHeading.textContent = '';
+            nameHeading.classList.add('is-typing');
+
+            const typeTimer = window.setInterval(function () {
+                index += 1;
+                nameHeading.textContent = fullText.slice(0, index);
+
+                if (index >= fullText.length) {
+                    window.clearInterval(typeTimer);
+
+                    window.setTimeout(function () {
+                        nameHeading.classList.remove('is-typing');
+                        nameHeading.classList.add('typing-complete');
+                    }, 280);
+                }
+            }, typingSpeedMs);
+        })();
     </script>
 </body>
 

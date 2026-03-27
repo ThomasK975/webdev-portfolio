@@ -1,171 +1,142 @@
-# About Page UI Alignment (Glass + Particles Theme)
+# Typewriter Animation Update (Run Once + Static Text After)
 
 ## 🎯 Goal
 
-Refactor the **About page** so it visually matches the rest of the website:
+Modify the homepage typewriter effect so that:
 
-* Same **particle background**
-* Same **glassmorphism style**
-* Same **neon/glow aesthetic**
-* Consistent layout and spacing
-
----
-
-## 🔴 Current Issues (From Screenshot)
-
-* Background is flat compared to other pages
-* Right-side image feels disconnected (no styling)
-* Text section lacks depth (no glass effect)
-* No glow or interaction
-* Layout feels more “static” than the rest of the site
+* It **runs only once** when the page loads
+* After finishing, the full text remains visible
+* The **cursor disappears** after completion
 
 ---
 
-## ✅ Target Design
+## 🔴 Current Behaviour
 
-The About page should feel like:
+* Animation loops infinitely
+* Cursor keeps blinking
+* Text keeps resetting and retyping
 
-> A continuation of the same futuristic UI system
+### ❌ Issue
 
-Everything should look like it belongs to the same **design language**
-
----
-
-## 🌌 1. Apply Global Background
-
-### Requirement
-
-* Use the same **particle background** as other pages
-* Ensure it covers the **entire viewport**
-
-### Result
-
-* Page instantly feels connected to the rest of the site
-* Glass effects will become visible and effective
+* Can feel repetitive and distracting
+* Reduces the “premium” feel of the site
 
 ---
 
-## 🧊 2. Convert Content Sections into Glass Panels
+## ✅ Desired Behaviour
 
-### Left Side (Text Content)
+### On Page Load:
 
-Turn the text container into a **glass card**:
+* Typewriter animation plays **once**
+* Text is typed out smoothly
 
-* Semi-transparent background
-* Background blur
-* Rounded corners
-* Subtle neon border
+### After Completion:
 
-### Visual Effect
-
-* Text appears to sit on floating glass
-* Particles are visible behind it
+* Full text stays visible
+* Cursor is removed
+* No further animation
 
 ---
 
-## 🖼️ 3. Upgrade the Image Section
+## 🧠 Implementation Concept
 
-### 🔴 Current Problem
+The animation should:
 
-* Image looks like a plain rectangle
-* No integration with theme
-
-### ✅ Improvements
-
-#### Option A (Recommended)
-
-* Wrap image in a **glass-style container**
-* Add:
-
-  * Rounded corners
-  * Subtle glow border
-  * Slight transparency overlay
-
-#### Option B (More Advanced)
-
-* Apply a **glass overlay on top of the image**
-* Makes it feel like it's behind glass
+1. Start automatically when the page loads
+2. Progress through the text character by character
+3. Stop permanently once finished
+4. Clean up any cursor or blinking effect
 
 ---
 
-## ✨ 4. Add Neon Accent Elements
+## ⚙️ Behaviour Breakdown
 
-### Accent Line (Top Cyan Line)
+### Step 1: Initial State
 
-Enhance it:
-
-* Add glow
-* Slight thickness variation
-* Optional animation (subtle pulse)
+* Text is empty (or partially hidden)
+* Cursor is visible
 
 ---
 
-### Section Title ("ABOUT")
+### Step 2: Typing Phase
 
-Improve it:
-
-* Add soft glow
-* Slight letter spacing
-* Optional gradient text
+* Characters appear one by one
+* Cursor may blink during typing
 
 ---
 
-## ⚡ 5. Add Interactivity
+### Step 3: Completion State
 
-### Hover Effects (Optional but Recommended)
-
-* Image:
-
-  * Slight zoom
-  * Glow intensifies
-
-* Text Card:
-
-  * Slight lift
-  * Border glow increases
+* Full sentence is displayed
+* Cursor is removed or hidden
+* Animation stops entirely
 
 ---
 
-## 🎨 6. Improve Layout Balance
+## 💡 Key Changes Needed
 
-### Current Layout
+### 1. Remove Looping
 
-* Left = text block
-* Right = large image
-
-### Improvements
-
-* Add spacing between sections
-* Align vertically (center content better)
-* Keep consistent margins with other pages
+* Disable any repeating interval or loop logic
+* Ensure animation stops after reaching full text length
 
 ---
 
-## 🌈 7. Glassmorphism Consistency Rules
+### 2. Stop the Cursor
 
-Apply same rules used elsewhere:
+* Remove blinking animation after typing finishes
+* Either:
 
-* Transparency (not fully opaque)
-* Blur background
-* Soft borders
-* Neon glow accents
-* Rounded corners (consistent radius)
+  * Hide the cursor
+  * Or remove the cursor element entirely
+
+---
+
+### 3. Preserve Final Text
+
+* Ensure text content remains unchanged after animation
+* No reset back to empty
+
+---
+
+## ✨ Optional Enhancements
+
+### Slight Pause at End
+
+* Add a short delay before removing cursor
+* Makes the finish feel more natural
+
+---
+
+### Smooth Cursor Fade
+
+* Instead of instantly disappearing, fade it out
+
+---
+
+### Speed Adjustment
+
+* Slightly vary typing speed for realism (optional)
 
 ---
 
 ## ⚠️ Common Mistakes
 
-### ❌ Mixing styles
+### ❌ Animation still looping
 
-* Don’t keep some elements flat while others are glass
+* Happens if interval/timer is not cleared
 
-### ❌ Overdoing glow
+---
 
-* Keep it subtle — too much looks messy
+### ❌ Cursor still blinking
 
-### ❌ No background detail
+* Cursor animation not disabled after completion
 
-* Glass needs particles or gradients behind it
+---
+
+### ❌ Text disappears
+
+* Happens if animation resets state at end
 
 ---
 
@@ -173,52 +144,38 @@ Apply same rules used elsewhere:
 
 ### Before
 
-```
-[ Flat background ]
-[ Text block ]
-[ Plain image ]
+```id="h7k2rp"
+Type → Finish → Reset → Repeat ❌
 ```
 
 ### After
 
-```
-[ Particle background ]
-[ Glass text panel ]
-[ Glass-framed image ]
-[ Neon accents ]
+```id="p9x4lm"
+Type → Finish → Stay ✔
 ```
 
 ---
 
 ## 🚀 Implementation Goal
 
-Refactor About page to:
+Refactor the typewriter effect to:
 
-1. Use global particle background
-2. Convert text section into glass card
-3. Style image to match theme
-4. Add glow accents and hover effects
-5. Match spacing/layout of other pages
-
----
-
-## 💡 Bonus Ideas (Optional)
-
-* Add animated gradient border around image
-* Add floating animation to image container
-* Slight parallax effect on scroll
-* Add subtle noise texture for realism
-* Sync glow colours with particle colours
+1. Run once on page load
+2. Stop after completing full text
+3. Remove cursor after completion
+4. Keep final text permanently visible
 
 ---
 
 ## 🧪 Final Outcome
 
-The About page should feel:
+Homepage should feel:
 
-* Cohesive with the rest of the site
-* Visually dynamic
-* Modern and “premium”
-* Like part of a single unified UI system
+* Cleaner
+* More polished
+* Less distracting
+* More professional
+
+Small change, but makes the site feel **much more intentional**.
 
 ---
