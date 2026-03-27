@@ -1,181 +1,191 @@
-# Typewriter Animation Update (Run Once + Static Text After)
+# Typewriter Animation Fix (Prevent Half-Letter Cursor Issue)
 
 ## 🎯 Goal
 
-Modify the homepage typewriter effect so that:
+Fix the typewriter animation so that:
 
-* It **runs only once** when the page loads
-* After finishing, the full text remains visible
-* The **cursor disappears** after completion
+* The cursor only appears **after fully rendered letters**
+* Text is revealed **one character at a time**
+* No letters appear partially cut off
 
 ---
 
-## 🔴 Current Behaviour
+## 🔴 Current Problem
 
-* Animation loops infinitely
-* Cursor keeps blinking
-* Text keeps resetting and retyping
+* The cursor sometimes appears:
 
-### ❌ Issue
+  * In the middle of a letter
+  * With letters partially visible (cut off)
 
-* Can feel repetitive and distracting
-* Reduces the “premium” feel of the site
+### ❌ Why This Happens
+
+This usually occurs when:
+
+* The animation is based on **width expansion**
+* Text is being revealed using **overflow + width animation**
+* Fonts are **not monospaced**, so letters have different widths
+
+---
+
+## 🧠 Root Cause
+
+### Width-Based Animation Issue
+
+When using a width animation:
+
+* The container grows gradually
+* Letters are revealed **pixel by pixel**
+* This leads to:
+
+  * Half letters appearing
+  * Cursor not aligned with characters
 
 ---
 
 ## ✅ Desired Behaviour
 
-### On Page Load:
-
-* Typewriter animation plays **once**
-* Text is typed out smoothly
-
-### After Completion:
-
-* Full text stays visible
-* Cursor is removed
-* No further animation
+* Each letter appears **fully and instantly**
+* Cursor moves **one full character at a time**
+* No partial rendering
 
 ---
 
-## 🧠 Implementation Concept
+## ✅ Correct Approach
 
-The animation should:
+### Use Character-Based Typing (Not Width-Based)
 
-1. Start automatically when the page loads
-2. Progress through the text character by character
-3. Stop permanently once finished
-4. Clean up any cursor or blinking effect
+Instead of revealing text via width:
+
+* Reveal text by **adding one character at a time**
+* Update the text content incrementally
 
 ---
 
 ## ⚙️ Behaviour Breakdown
 
-### Step 1: Initial State
+### Step 1: Start State
 
-* Text is empty (or partially hidden)
-* Cursor is visible
-
----
-
-### Step 2: Typing Phase
-
-* Characters appear one by one
-* Cursor may blink during typing
+* Empty text
+* Cursor visible
 
 ---
 
-### Step 3: Completion State
+### Step 2: Typing Loop
 
-* Full sentence is displayed
-* Cursor is removed or hidden
-* Animation stops entirely
-
----
-
-## 💡 Key Changes Needed
-
-### 1. Remove Looping
-
-* Disable any repeating interval or loop logic
-* Ensure animation stops after reaching full text length
+* Add **one full character per step**
+* Cursor moves forward in sync
 
 ---
 
-### 2. Stop the Cursor
+### Step 3: Completion
 
-* Remove blinking animation after typing finishes
-* Either:
-
-  * Hide the cursor
-  * Or remove the cursor element entirely
+* Full text displayed
+* Cursor removed (as per previous requirement)
 
 ---
 
-### 3. Preserve Final Text
+## 💡 Key Fixes
 
-* Ensure text content remains unchanged after animation
-* No reset back to empty
+### 1. Avoid Width Animations
 
----
+* Do NOT use:
 
-## ✨ Optional Enhancements
-
-### Slight Pause at End
-
-* Add a short delay before removing cursor
-* Makes the finish feel more natural
+  * Expanding width containers
+  * Clipping text via overflow
 
 ---
 
-### Smooth Cursor Fade
+### 2. Use Text Updates Instead
 
-* Instead of instantly disappearing, fade it out
+* Build the string gradually
+* Append one character at a time
 
 ---
 
-### Speed Adjustment
+### 3. Cursor Placement
 
-* Slightly vary typing speed for realism (optional)
+* Cursor should:
+
+  * Be positioned **after the text**
+  * Move only when a full character is added
+
+---
+
+### 4. Font Consideration (Optional but Helpful)
+
+#### Option A (Best for precision)
+
+* Use a **monospace font**
+* Ensures consistent spacing
+
+#### Option B
+
+* Keep current font, but rely fully on character-based typing
 
 ---
 
 ## ⚠️ Common Mistakes
 
-### ❌ Animation still looping
+### ❌ Mixing width animation with typing logic
 
-* Happens if interval/timer is not cleared
-
----
-
-### ❌ Cursor still blinking
-
-* Cursor animation not disabled after completion
+* Causes visual glitches
 
 ---
 
-### ❌ Text disappears
+### ❌ Cursor as background effect
 
-* Happens if animation resets state at end
+* Makes alignment harder to control
+
+---
+
+### ❌ Using percentage widths
+
+* Leads to inconsistent letter rendering
 
 ---
 
 ## 🧠 Mental Model
 
-### Before
+### Before (Broken)
 
-```id="h7k2rp"
-Type → Finish → Reset → Repeat ❌
+```id="g7m2qp"
+[ L o r e m ]
+   ↑
+ Cursor appears mid-letter ❌
 ```
 
-### After
+---
 
-```id="p9x4lm"
-Type → Finish → Stay ✔
+### After (Correct)
+
+```id="u8x4zn"
+[ L o r e m ]
+        ↑
+ Cursor always after full letter ✔
 ```
 
 ---
 
 ## 🚀 Implementation Goal
 
-Refactor the typewriter effect to:
+Refactor the typewriter animation to:
 
-1. Run once on page load
-2. Stop after completing full text
-3. Remove cursor after completion
-4. Keep final text permanently visible
+1. Reveal text **one character at a time**
+2. Remove any width-based animation
+3. Keep cursor aligned to full characters only
+4. Ensure smooth and consistent typing effect
 
 ---
 
 ## 🧪 Final Outcome
 
-Homepage should feel:
+The animation should feel:
 
-* Cleaner
-* More polished
-* Less distracting
-* More professional
+* Clean
+* Precise
+* Natural (like real typing)
+* Visually consistent
 
-Small change, but makes the site feel **much more intentional**.
+No more half-letters — only clean, full character transitions.
 
 ---
