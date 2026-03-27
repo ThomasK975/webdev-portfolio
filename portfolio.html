@@ -24,11 +24,12 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="portfolio-page">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <div class="container-fluid min-vh-100 home-style">
+        <div id="particles-js" aria-hidden="true"></div>
         <header>
             <div class="row">
                 <div class="col">
@@ -75,7 +76,7 @@
                             <div class="row mt-1 gy-3 justify-content-center justify-content-md-start">
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/java.png" alt="Java logo">
                                         <p class="py-2">Java</p>
                                     </div>
@@ -83,7 +84,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/python.png" alt="Python logo">
                                         <p class="py-2">Python</p>
                                     </div>
@@ -91,7 +92,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/html5.png" width="45" alt="HTML 5 image">
                                         <p class="py-2">HTML5</p>
                                     </div>
@@ -99,7 +100,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/css.png" alt="CSS logo">
                                         <p class="py-2">CSS</p>
                                     </div>
@@ -117,7 +118,7 @@
                             <div class="row mt-1 gy-3 justify-content-center justify-content-md-start">
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/IntelliJ.png" alt="IntelliJ IDE logo">
                                         <p class="py-2">IntelliJ Idea</p>
                                     </div>
@@ -125,7 +126,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/Eclipse.png" alt="Eclipse IDE logo">
                                         <p class="py-2">Eclipse</p>
                                     </div>
@@ -133,7 +134,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/VSCode.png" alt="VS Code IDE logo">
                                         <p class="py-2">VS Code</p>
                                     </div>
@@ -141,7 +142,7 @@
 
                                 <div class="col-6 col-md-3 d-flex">
                                     <div
-                                        class="p-2 rounded-4 d-flex flex-column language gap-2 justify-content-center align-items-center greyBackground w-100">
+                                        class="rounded-4 d-flex flex-column skill-card gap-2 justify-content-center align-items-center w-100">
                                         <img src="images/Thonny.png" alt="Thonny IDE Logo">
                                         <p class="py-2">Thonny</p>
                                     </div>
@@ -153,7 +154,7 @@
             </div>
 
             <!-- Projects section -->
-            <section class="container-fluid p-5 greyBackground mt-5">
+            <section class="container-fluid p-4 p-md-5 glass-panel project-section mt-5">
                 <div class="row">
                     <div class="col">
                         <h2 class="ms-md-5 mt-5 redText">Here are some of my projects:</h2>
@@ -162,10 +163,10 @@
 
                 <div class="row mt-2 gy-5">
                     <div class="col-12 col-md-4">
-                        <div class="card h-100">
+                        <div class="card h-100 project-card">
                             <img src="https://picsum.photos/500/400" class="card-img-top"
                                 alt="A random placeholder image">
-                            <div class="card-body greyBackground">
+                            <div class="card-body">
                                 <h2 class="card-title text-white h5">Software Development Final Project</h2>
                                 <p class="card-text text-white">Some quick example text to build on the card title and
                                     make
@@ -175,10 +176,10 @@
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card h-100">
+                        <div class="card h-100 project-card">
                             <img src="https://picsum.photos/500/400" class="card-img-top"
                                 alt="A random placeholder image">
-                            <div class="card-body greyBackground">
+                            <div class="card-body">
                                 <h3 class="card-title text-white h5">Embedded Systems Raspberry Pi Project</h3>
                                 <p class="card-text text-white">Some quick example text to build on the card title and
                                     make
@@ -188,10 +189,10 @@
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card h-100">
+                        <div class="card h-100 project-card">
                             <img src="https://picsum.photos/500/400" class="card-img-top"
                                 alt="A random placeholder image">
-                            <div class="card-body greyBackground">
+                            <div class="card-body">
                                 <h4 class="card-title text-white h5">Unix systems final project</h4>
                                 <p class="card-text text-white">Some quick example text to build on the card title and
                                     make
@@ -208,6 +209,77 @@
 
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 900
+                    }
+                },
+                color: {
+                    value: '#79f7ff'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.35,
+                    random: true
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 130,
+                    color: '#55e6ff',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.4,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.45
+                        }
+                    },
+                    push: {
+                        particles_nb: 3
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 
 </body>
 
