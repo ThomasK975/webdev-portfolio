@@ -26,7 +26,7 @@ async function loadLatestRepo() {
     repoLink.setAttribute('href', repo.html_url)
     repoLanguage.textContent = repo.language
     repoDescription.textContent = repo.description
-    const date = new Date(repo.pushed_at).toLocaleDateString()
+    const date = new Date(repo.pushed_at).toLocaleDateString('en-GB')
     repoUpdated.textContent = date
 
     latestRepo.style.display = 'block'
