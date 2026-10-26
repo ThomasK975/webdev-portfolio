@@ -22,6 +22,8 @@ async function loadLatestRepo() {
     const repoDescription = document.querySelector('#repo-description')
     const repoUpdated = document.querySelector('#repo-updated')
 
+    const lastUpdated = document.querySelector('#last-updated')
+
     repoName.textContent = repo.name
     repoLink.setAttribute('href', repo.html_url)
     repoLanguage.textContent = repo.language
@@ -31,6 +33,7 @@ async function loadLatestRepo() {
 
     latestRepo.style.display = 'block'
 
+    lastUpdated.textContent = lastUpdated.textContent + " " + date
     // then update the DOM with repo.name, repo.description etc.
 }
 

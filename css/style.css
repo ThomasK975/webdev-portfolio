@@ -189,7 +189,7 @@ footer p{
 #homeContainer > p.text-white{
   font-size: clamp(0.98rem, 1.6vw, 1.2rem);
   line-height: 1.65;
-  max-width: 65ch;         
+  max-width: 80ch;         
   text-align: center;     
 }
 
@@ -524,11 +524,127 @@ footer p{
 
 
 /* ============================================================
+   THEME PANEL
+   ============================================================ */
+
+#theme-panel {
+  position: fixed;
+  top: 80px;
+  right: -2px;
+  background: rgba(20, 20, 30, 0.85);
+  border: 1px solid rgba(121, 247, 255, 0.2);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+
+#theme-panel-label {
+  font-size: 11px;
+  color: #79f7ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#theme-circles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.theme-circle:hover {
+  transform: scale(1.15);
+}
+
+#theme-light {
+  background: #ffffff;
+}
+
+#theme-dark {
+  background: #111111;
+  border-color: #444;
+}
+
+.theme-circle-active {
+  border-color: #79f7ff !important;
+}
+
+/* ============================================================
+   GITHUB LATEST REPO CARD (home page)
+   ============================================================ */
+
+#latest-repo {
+  display: none; /* shown by js/github.js once loaded */
+  max-width: 480px;
+  width: 100%;
+}
+
+#latest-repo .repo-heading {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#repo-link {
+  text-decoration: none;
+}
+
+.repo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(121, 247, 255, 0.2);
+  border-radius: 10px;
+  padding: 16px 20px;
+  transition: border-color 0.2s;
+}
+
+#repo-name {
+  font-size: 15px;
+}
+
+#repo-language {
+  font-size: 11px;
+  color: #79f7ff;
+  background: rgba(121, 247, 255, 0.1);
+  border: 1px solid rgba(121, 247, 255, 0.3);
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+#repo-description {
+  font-size: 13px;
+  color: #aaa;
+}
+
+#repo-updated {
+  font-size: 11px;
+  color: #666;
+}
+
+
+
+/* ============================================================
    LIGHT MODE OVERRIDES
    ============================================================ */
 
 /* Base */
 body.light-mode {
+  background: #f0f0f0 !important;
   color: #111 !important;
 }
 
@@ -711,22 +827,3 @@ body.light-mode #theme-panel {
 body.light-mode #theme-panel-label {
   color: #0077aa !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
