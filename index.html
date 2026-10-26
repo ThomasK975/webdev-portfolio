@@ -23,7 +23,7 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="home-style d-flex flex-column min-vh-100">
         <!-- Theme switcher -->
         <div id="theme-panel">
             <span id="theme-panel-label">Theme</span>
@@ -35,78 +35,70 @@
             </div>
         </div>
 
-        <div class="container-fluid home-style min-vh-100 d-flex flex-column">
-            <div id="particles-js" aria-hidden="true"></div>
+        <div id="particles-js" aria-hidden="true"></div>
 
-            <header>
-                <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-                    <div class="container-fluid">
-                        <div class="mobile-menu-anchor">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <div class="mobile-menu-anchor">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                            <div class="collapse navbar-collapse mobile-glass-menu" id="navbarNavAltMarkup">
-                                <div class="navbar-nav w-100">
-                                    <a class="nav-link active fs-5 menuhovercolourchange" aria-current="page"
-                                       href="index.html">Home</a>
-                                    <a class="nav-link fs-5 menuhovercolourchange" href="about.html">About</a>
-                                    <a class="nav-link fs-5 menuhovercolourchange" href="portfolio.html">Portfolio</a>
-                                </div>
+                        <div class="collapse navbar-collapse mobile-glass-menu" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active fs-5 menuhovercolourchange" aria-current="page"
+                                   href="index.html">Home</a>
+                                <a class="nav-link fs-5 menuhovercolourchange" href="about.html">About</a>
+                                <a class="nav-link fs-5 menuhovercolourchange" href="portfolio.html">Portfolio</a>
                             </div>
                         </div>
                     </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
 
-            <main class="flex-grow-1">
-                <section id="homeContainer" class="d-flex flex-column align-items-center">
-                    <p class="aquaText">Hello, my name is</p>
-                    <div class="typewriter">
-                        <h1 class="text-white" id="nameFontSize" data-typewriter-text="Thomas Kilian"></h1>
-                    </div>
-                    <p class="text-white">I am a second year computer science student studying at the University Of
-                        Dundee</p>
-                    <p class="text-white">I have created this website to showcase skills I have learned so far.</p>
+        <main class="flex-grow-1 d-flex justify-content-center px-2">
+            <div id="homeContainer" class="d-flex flex-column align-items-center">
+                <p class="aquaText">Hello, my name is</p>
+                <h1 class="text-white" id="nameFontSize" data-typewriter-text="Thomas Kilian"></h1>
+                <p class="text-white">I am a second year computer science student studying at the University Of
+                    Dundee</p>
+                <p class="text-white">I have created this website to showcase skills I have learned so far.</p>
 
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-info homebutton-fade" href="https://github.com/ThomasK975">
-                            <div class="d-flex gap-2">
-                                <span class="mt-1 text-white button-text">View GitHub</span>
-                                <img src="images/github-icon.png" width="32" alt="github logo">
-                            </div>
-                        </a>
-                        <a class="btn btn-outline-info homebutton-fade" href="tel:+4733378901">
-                            <span class="mt-1 button-text">Contact📞</span>
-                        </a>
-                    </div>
+                <div class="d-flex gap-2">
+                    <a class="btn btn-info homebutton-fade d-flex align-items-center gap-2" href="https://github.com/ThomasK975">
+                        <span class="text-white button-text">View GitHub</span>
+                        <img src="images/github-icon.png" width="32" alt="">
+                    </a>
+                    <a class="btn btn-outline-info homebutton-fade d-flex align-items-center" href="tel:+4733378901">
+                        <span class="button-text">Contact📞</span>
+                    </a>
+                </div>
 
-                    <!-- GitHub latest repo card (filled in by js/github.js) -->
-                    <div id="latest-repo" class="mt-4">
-                        <p class="aquaText mb-2 repo-heading">Latest project</p>
-                        <a id="repo-link" href="#" target="_blank">
-                            <div class="repo-card">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span id="repo-name" class="text-white fw-bold"></span>
-                                    <span id="repo-language"></span>
-                                </div>
-                                <p id="repo-description" class="mb-1"></p>
-                                <span id="repo-updated"></span>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-            </main>
+                <!-- GitHub latest repo card (filled in by js/github.js) -->
+                <div id="latest-repo" class="mt-4">
+                    <p class="aquaText mb-2 repo-heading">Latest project</p>
+                    <a id="repo-link" class="repo-card" href="#" target="_blank" rel="noopener">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span id="repo-name" class="text-white fw-bold"></span>
+                            <span id="repo-language"></span>
+                        </div>
+                        <p id="repo-description" class="mb-1"></p>
+                        <span id="repo-updated"></span>
+                    </a>
+                </div>
+            </div>
+        </main>
 
-            <footer class="py-3 row">
-                <p class="col-12 col-lg-4 offset-lg-4 text-center text-white mb-0">© 2026 Thomas Kilian. All rights
-                    reserved.</p>
-                <p class="col-12 col-lg-4 text-center text-lg-end text-white mb-0" id="last-updated">Website Last
-                    Updated: </p>
-            </footer>
-        </div>
+        <footer class="row mx-0 py-3">
+            <p class="col-12 col-lg-4 offset-lg-4 text-center text-white mb-0">© 2026 Thomas Kilian. All rights
+                reserved.</p>
+            <p class="col-12 col-lg-4 text-center text-lg-end text-white mb-0" id="last-updated">Website Last
+                Updated: </p>
+        </footer>
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
