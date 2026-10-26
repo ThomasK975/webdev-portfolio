@@ -1,0 +1,175 @@
+/* Portfolio page (portfolio.html) */
+
+.project-section {
+  margin-inline: clamp(0.3rem, 2vw, 1.4rem);
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  isolation: isolate;
+  min-height: 150px;
+  padding: 1.1rem 0.8rem;
+  overflow: hidden;
+
+  background: rgba(20, 30, 60, 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.1),
+    0 0 30px rgba(0, 255, 255, 0.05);
+
+  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease, background-color 0.32s ease;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 255, 0.2),
+    transparent
+  );
+
+  opacity: 0;
+  transform: translateX(-8%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.skill-card img {
+  width: clamp(40px, 6vw, 56px);
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #d9faff;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  background: rgba(20, 30, 60, 0.35);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 60px rgba(0, 255, 255, 0.15);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.skill-card:hover img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(117, 253, 255, 0.45));
+}
+
+.skill-card:hover p {
+  color: #f0ffff;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(116, 245, 255, 0.2);
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(20, 30, 60, 0.44), rgba(8, 17, 36, 0.33));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.12),
+    0 20px 38px rgba(5, 8, 22, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card .card-body {
+  background: transparent;
+}
+
+.project-card .card-img-top {
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(130, 250, 255, 0.45);
+  box-shadow:
+    0 0 26px rgba(0, 255, 255, 0.25),
+    0 28px 44px rgba(5, 8, 22, 0.4);
+}
+
+@media (max-width: 767.98px) {
+  .skill-card {
+    min-height: 136px;
+    padding: 0.95rem 0.65rem;
+  }
+
+  .project-section {
+    margin-inline: 0;
+    border-radius: 18px;
+  }
+}
+
+/* ---------- Light mode ---------- */
+
+/* Portfolio skill cards */
+body.light-mode .skill-card {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(0, 100, 160, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .skill-card p {
+  color: #222 !important;
+}
+
+body.light-mode .skill-card:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(0, 100, 160, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(0, 100, 160, 0.2) !important;
+}
+
+body.light-mode .skill-card:hover img {
+  filter: drop-shadow(0 0 10px rgba(0, 100, 160, 0.3)) !important;
+}
+
+/* Portfolio project section */
+body.light-mode .project-section {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.6), rgba(220, 235, 255, 0.5)) !important;
+  border-color: rgba(0, 100, 160, 0.2) !important;
+}
+
+body.light-mode .project-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(220, 235, 255, 0.5)) !important;
+  border-color: rgba(0, 100, 160, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .project-card:hover {
+  border-color: rgba(0, 100, 160, 0.45) !important;
+  box-shadow: 0 12px 32px rgba(0, 100, 160, 0.2) !important;
+}
+
+body.light-mode .card-title,
+body.light-mode .card-text {
+  color: #111 !important;
+}

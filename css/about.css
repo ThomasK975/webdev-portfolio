@@ -1,0 +1,111 @@
+/* About page (about.html) */
+
+.about-main {
+  padding-top: 6.25rem;
+  padding-bottom: 2rem;
+}
+
+.about-layout {
+  position: relative;
+  z-index: 5;
+}
+
+.about-text-panel {
+  transition: transform 0.34s ease, border-color 0.34s ease, box-shadow 0.34s ease;
+}
+
+.about-text-panel:hover {
+  transform: translateY(-6px);
+  border-color: rgba(130, 250, 255, 0.38);
+  box-shadow:
+    0 0 24px rgba(0, 255, 255, 0.2),
+    0 26px 46px rgba(5, 8, 22, 0.38);
+}
+
+.overlap-line{
+    position: relative;
+    width: min(68%, 360px);
+    border-top: 5px solid #00FFFB;
+    border-radius: 999px;
+    margin: 0 0 1.6rem 0;
+    box-shadow: 0 0 14px rgba(0, 255, 251, 0.55);
+}
+
+#aboutHeaderFontSize {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: .95;
+    letter-spacing: 0.14em;
+    text-shadow: 0 0 18px rgba(0, 255, 251, 0.3);
+}
+
+.subHeadingTextSize{
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
+  line-height: 1.25;
+  max-width: 42ch;
+}
+
+.aboutParagraphs{
+  font-size: clamp(0.98rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  max-width: 70ch;
+  color: #e8f6ff;
+}
+
+.aboutBody {
+  font-size: clamp(0.98rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  max-width: 70ch;
+  color: #d6eeff;
+}
+
+.about-image-panel {
+  padding: 0.6rem;
+  transition: transform 0.34s ease, border-color 0.34s ease, box-shadow 0.34s ease;
+}
+
+.about-image {
+  border-radius: 16px;
+  object-fit: cover;
+  min-height: 100%;
+  max-height: 700px;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.about-image-panel:hover {
+  transform: translateY(-6px);
+  border-color: rgba(130, 250, 255, 0.42);
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.24),
+    0 28px 48px rgba(5, 8, 22, 0.42);
+}
+
+.about-image-panel:hover .about-image {
+  transform: scale(1.02);
+  filter: saturate(1.12) contrast(1.06);
+}
+
+@media (max-width: 991.98px) {
+  .about-main {
+    padding-top: 5.75rem;
+  }
+
+  .about-image {
+    max-height: 460px;
+  }
+}
+
+/* ---------- Light mode ---------- */
+
+body.light-mode .overlap-line {
+  border-color: #0077aa !important;
+  box-shadow: 0 0 14px rgba(0, 119, 170, 0.3) !important;
+}
+
+body.light-mode .aboutParagraphs,
+body.light-mode .aboutBody {
+  color: #222 !important;
+}
+
+body.light-mode .subHeadingTextSize {
+  color: #111 !important;
+}
