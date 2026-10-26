@@ -156,6 +156,11 @@ footer p{
   white-space: nowrap;
 }
 
+/* Home footer: scale with the screen so the copyright fits its third of the row */
+.home-style > footer p {
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
+
 
 /*End of general CSS*/
 
