@@ -10,6 +10,7 @@
 // repo.visibility        — 'public' or 'private'
 
 async function loadLatestRepo() {
+    // Find most recently updated repo
     const response = await fetch('https://api.github.com/users/ThomasK975/repos?sort=pushed&per_page=1')
     const repos = await response.json()
     const repo = repos[0]
@@ -33,7 +34,11 @@ async function loadLatestRepo() {
 
     latestRepo.style.display = 'block'
 
-    lastUpdated.textContent = lastUpdated.textContent + " " + date
+    // Last updated date
+    const secondResponse = await fetch("https://api.github.com/repos/ThomasK975/webdev-portfolio")
+    const webdevRepo = await secondResponse.json()
+
+    lastUpdated.textContent = lastUpdated.textContent + " " + new Date(webdevRepo.updated_at).toLocaleDateString('en-GB')
     // then update the DOM with repo.name, repo.description etc.
 }
 
