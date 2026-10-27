@@ -35,10 +35,19 @@ async function loadLatestRepo() {
     latestRepo.style.display = 'block'
 
     // Last updated date
-    const secondResponse = await fetch("https://api.github.com/repos/ThomasK975/webdev-portfolio")
-    const webdevRepo = await secondResponse.json()
+    let updatedDate
 
-    lastUpdated.textContent = lastUpdated.textContent + " " + new Date(webdevRepo.updated_at).toLocaleDateString('en-GB')
+    if (repo.name === "webdev-portfolio") {
+        updatedDate = repo.pushed_at
+    }
+    else {
+        const secondResponse = await fetch("https://api.github.com/repos/ThomasK975/webdev-portfolio")
+        const webdevRepo = await secondResponse.json()
+
+        updatedDate = webdevRepo.pushed_at
+    }
+
+    lastUpdated.textContent = lastUpdated.textContent + " " + new Date(updatedDate).toLocaleDateString('en-GB')
     // then update the DOM with repo.name, repo.description etc.
 }
 
